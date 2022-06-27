@@ -7,6 +7,30 @@
     <title>Weather App</title>
   </head>
   <body>
+    <div class="container">
+      <div class="input">
+        <label for="location">Enter your location:</label>
+        <input type="text" name="location" id="location" />
+        <button class="search">Search</button>
+      </div>
+      <div class="weather hide">
+        <div class="first-row">
+          <ul>
+            <li class="location"></li>
+            <li class="temp"></li>
+            <li class="weather-img"></li>
+          </ul>
+        </div>
+        <div class="second-row">
+          <ul>
+            <li class="humidity"></li>
+            <li class="pressure"></li>
+            <li class="min-temp"></li>
+            <li class="max-temp"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
