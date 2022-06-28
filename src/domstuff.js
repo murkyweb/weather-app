@@ -21,6 +21,7 @@ const DOMstuff = (() => {
     const maxTemp = document.querySelector(".max-temp");
     const time = document.querySelector(".second-row");
     const weatherIcon = document.querySelector(".weather-img");
+    const weatherDescription = document.querySelector(".weather-description");
 
     location.innerHTML = `<span>${data.name}</span><span>${data.country}</span>`;
     temp.innerHTML = `<span>${Conversion.kelvinToCelsius(data.temp)} °C</span>`;
@@ -39,6 +40,7 @@ const DOMstuff = (() => {
     weatherIcon.style.backgroundImage = `url("http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png")`;
     weatherIcon.style.width = "80px";
     weatherIcon.style.height = "60px";
+    weatherDescription.innerHTML = `<span>${data.weatherDescription}</span>`;
     weather.className = "weather show";
   }
 

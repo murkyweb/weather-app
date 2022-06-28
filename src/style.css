@@ -10,12 +10,22 @@
 }
 
 body {
+  position: relative;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   line-height: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("bg.jpg");
+}
+
+.test {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 ul {
@@ -25,11 +35,13 @@ ul {
 input {
   outline: none;
   padding: 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
 }
 
 input:focus {
-  border-color: rgba(0, 0, 0, 1);
+  border-color: rgb(255, 255, 255);
 }
 
 .hide {
@@ -44,6 +56,12 @@ input:focus {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  color: white;
+  background-color: rgb(11, 23, 27);
+}
+
+.search:hover {
+  background-color: black;
 }
 
 .location,
@@ -61,6 +79,7 @@ input:focus {
 }
 
 .container {
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -69,6 +88,8 @@ input:focus {
   margin-top: -15vh;
   border: 1px solid black;
   border-radius: 5px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .weather-img {
@@ -100,7 +121,12 @@ input:focus {
 .input {
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 600px) {

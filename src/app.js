@@ -4,6 +4,7 @@ const Weather = (() => {
     const country = data.sys.country;
     const temp = data.main.temp;
     const weatherCondition = data.weather[0].main;
+    const weatherDescription = data.weather[0].description;
     const weatherIcon = data.weather[0].icon;
     const time = data.dt;
     const pressure = data.main.pressure;
@@ -15,6 +16,7 @@ const Weather = (() => {
       country,
       temp,
       weatherCondition,
+      weatherDescription,
       weatherIcon,
       time,
       pressure,
