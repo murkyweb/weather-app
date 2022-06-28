@@ -3,11 +3,25 @@ const Weather = (() => {
     const name = data.name;
     const country = data.sys.country;
     const temp = data.main.temp;
+    const weatherCondition = data.weather[0].main;
+    const weatherIcon = data.weather[0].icon;
+    const time = data.dt;
     const pressure = data.main.pressure;
     const humidity = data.main.humidity;
     const minTemp = data.main.temp_min;
     const maxTemp = data.main.temp_max;
-    return { name, country, temp, pressure, humidity, minTemp, maxTemp };
+    return {
+      name,
+      country,
+      temp,
+      weatherCondition,
+      weatherIcon,
+      time,
+      pressure,
+      humidity,
+      minTemp,
+      maxTemp,
+    };
   }
 
   async function getWeather(location) {
@@ -20,7 +34,6 @@ const Weather = (() => {
       );
       const data = await response.json();
       const processedData = processData(data);
-      console.log(processedData);
       return processedData;
     } catch (error) {
       return null;
