@@ -29,7 +29,7 @@ const Weather = (() => {
   async function getWeather(location) {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=1a020968fb840e3784b048ba0413b0dd`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=1a020968fb840e3784b048ba0413b0dd`,
         {
           mode: "cors",
         }
